@@ -1,7 +1,19 @@
+@import url('http://fonts.cdnfonts.com/css/pixelar');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body{
+    background-color: #181818;
+    color: rgb(62, 166, 255);
+}
+
+h1{
+    font-family: 'Pixelar Regular', sans-serif;
+    font-size: 44px;
 }
 
 .container{
