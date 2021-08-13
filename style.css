@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid red;
+    width: 1000px;
+    height: 750px;
+    margin: auto;
+    margin-top: 70px;
+}
+
+aside{
+    border: 1px solid green;
+    height: 600px;
+    width: 200px;
+}
+
+article{
+    border: 1px solid blue;
+    height: 600px;
+    width: 600px;
+}
