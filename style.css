@@ -34,7 +34,34 @@ section{
 aside{
     border: 1px solid green;
     height: 600px;
-    width: 200px;
+    width: 300px;
+}
+
+button{
+    width: 220px;
+    height: 50px;
+    background: none;
+    border: 1px solid rgb(62, 166, 255);
+    color: rgb(62, 166, 255);
+    font-weight: bold;
+}
+
+.color-btns{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.toggle-btns{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 article{
