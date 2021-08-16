@@ -65,13 +65,6 @@ button{
     margin-bottom: 30px;
 }
 
-article{
-    border: 1px solid blue;
-    height: 600px;
-    width: 600px;
-    background: #202020;
-
-}
 
 .slider{
     margin-bottom: 10px;
@@ -80,4 +73,31 @@ article{
 .toggledOn{
     background: rgb(62, 166, 255);
     color: #181818;
+}
+
+
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blue;
+    height: 600px;
+    width: 600px;
+    background: #202020;
+
+}
+
+.grid{
+    background: #fff;
+    min-width: 600px;
+    min-height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.square{
+    height: 37.5px;
+    width: 37.5px;
+    border: 1px solid black;
+    border-collapse: collapse;
 }
