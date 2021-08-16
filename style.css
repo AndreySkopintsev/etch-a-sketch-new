@@ -35,6 +35,7 @@ aside{
     border: 1px solid green;
     height: 600px;
     width: 300px;
+    background: #202020;
 }
 
 button{
@@ -68,4 +69,6 @@ article{
     border: 1px solid blue;
     height: 600px;
     width: 600px;
+    background: #202020;
+
 }
