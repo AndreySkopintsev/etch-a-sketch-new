@@ -72,3 +72,12 @@ article{
     background: #202020;
 
 }
+
+.slider{
+    margin-bottom: 10px;
+}
+
+.toggledOn{
+    background: rgb(62, 166, 255);
+    color: #181818;
+}
