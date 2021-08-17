@@ -2,9 +2,11 @@ const grid = document.getElementById('grid')
 const clearBtn = document.getElementById('clearBtn')
 const toggleGrid = document.getElementById('toggleLines')
 const colorPicker = document.getElementById('colorPicker')
+const colorFill = document.getElementById('colorFill')
 
 let squares
 let color = 'black'
+let background = 'white'
 let mouseDown = false
 
 //Functions
@@ -43,6 +45,22 @@ colorPicker.addEventListener('input',()=>{
     console.log(color)
 })
 
+//Color fill button (used to change background color)
+colorFill.addEventListener('click',(e)=>{
+    if(!e.target.classList.contains('toggledOn')){
+        console.log('inactive')
+        e.target.classList.add('toggledOn')
+        background = colorPicker.value
+        grid.addEventListener('click',()=>{
+            grid.style.backgroundColor = `${background}`
+            e.target.classList.remove('toggledOn')
+        })
+    }else{
+        console.log('active')
+        e.target.classList.remove('toggledOn')
+        grid.removeEventListener('click')
+    }
+})
 
 //Clear button
 clearBtn.addEventListener('click',()=>{

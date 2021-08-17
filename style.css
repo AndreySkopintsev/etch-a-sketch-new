@@ -65,6 +65,10 @@ aside{
     transform: translateX(-10px) translateY(-10px);
 }
 
+#colorPicker,.color-box:hover{
+    cursor: pointer;
+}
+
 button{
     width: 220px;
     height: 40px;
@@ -74,10 +78,20 @@ button{
     font-family: 'Atkinson Hyperlegible', sans-serif;
     font-weight: bold;
     font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+
+button:active{
+    transform: scale(0.9);
 }
 
 button:hover{
     cursor: pointer;
+    box-shadow: 0 0 5px #fff;
+}
+
+button:focus{
+    outline:none;
 }
 
 .color-btns{
@@ -133,7 +147,7 @@ article{
     width: 37.5px;
     border: 1px solid rgb(121, 113, 113);
     border-collapse: collapse;
-    background: #fff;
+    background: none;
 }
 
 .emptyGrid{
