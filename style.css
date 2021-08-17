@@ -47,6 +47,10 @@ button{
     font-weight: bold;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 .color-btns{
     height: 120px;
     display: flex;
@@ -100,6 +104,15 @@ article{
     width: 37.5px;
     border: 1px solid rgb(121, 113, 113);
     border-collapse: collapse;
+    background: #fff;
+}
+
+.emptyGrid{
+    border: none;
+}
+
+.square:hover{
+    cursor:crosshair;
 }
 
 .red{
