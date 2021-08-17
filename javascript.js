@@ -31,7 +31,7 @@ fillGrid()
 squares.forEach(square => {
     square.addEventListener('mouseover',(e)=>{
         if(mouseDown){
-            e.target.style.backgroundColor = 'black'
+            e.target.style.backgroundColor = color
         }
     })
 })
