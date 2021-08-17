@@ -1,6 +1,7 @@
 const grid = document.getElementById('grid')
 const clearBtn = document.getElementById('clearBtn')
 const toggleGrid = document.getElementById('toggleLines')
+const colorPicker = document.getElementById('colorPicker')
 
 let squares
 let color = 'black'
@@ -34,6 +35,12 @@ squares.forEach(square => {
             e.target.style.backgroundColor = color
         }
     })
+})
+
+//Color picker button
+colorPicker.addEventListener('input',()=>{
+    color = colorPicker.value
+    console.log(color)
 })
 
 
