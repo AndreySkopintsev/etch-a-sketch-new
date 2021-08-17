@@ -24,15 +24,12 @@ section{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid red;
     width: 1000px;
     height: 750px;
     margin: auto;
-    margin-top: 70px;
 }
 
 aside{
-    border: 1px solid green;
     height: 600px;
     width: 300px;
     background: #202020;
@@ -113,8 +110,4 @@ article{
 
 .square:hover{
     cursor:crosshair;
-}
-
-.red{
-    background: red;
 }

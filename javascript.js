@@ -36,6 +36,7 @@ squares.forEach(square => {
     })
 })
 
+
 //Clear button
 clearBtn.addEventListener('click',()=>{
     squares.forEach(square => {
@@ -46,4 +47,7 @@ clearBtn.addEventListener('click',()=>{
 //Grid turning on/off
 toggleGrid.addEventListener('click',()=>{
     toggleGrid.classList.toggle('toggledOn')
+    squares.forEach(square => {
+        square.classList.toggle('emptyGrid')
+    })
 })
