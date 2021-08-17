@@ -1,5 +1,7 @@
 const grid = document.getElementById('grid')
 let squares
+let color = 'black'
+let mouseDown = false
 
 //Functions
 
@@ -12,6 +14,8 @@ function fillGrid(){
     squares = document.querySelectorAll('.square')   
 }
 
+document.body.onmousedown = () => {mouseDown = true}
+document.body.onmouseup = () => {mouseDown = false}
 
 
 fillGrid()
@@ -20,6 +24,8 @@ fillGrid()
 
 squares.forEach(square => {
     square.addEventListener('mouseover',(e)=>{
-        square.classList.toggle('red')
+        if(mouseDown){
+            e.target.style.backgroundColor = 'black'
+        }
     })
 })

@@ -100,6 +100,11 @@ article{
     width: 37.5px;
     border: 1px solid rgb(121, 113, 113);
     border-collapse: collapse;
+    background: #fff;
+}
+
+.square:hover{
+    cursor:crosshair;
 }
 
 .red{
