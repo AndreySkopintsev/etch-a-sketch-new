@@ -3,11 +3,13 @@ const clearBtn = document.getElementById('clearBtn')
 const toggleGrid = document.getElementById('toggleLines')
 const colorPicker = document.getElementById('colorPicker')
 const colorFill = document.getElementById('colorFill')
+const rainbowBtn = document.getElementById('rainbowBtn')
 
 let squares
 let color = 'black'
 let background = 'white'
 let mouseDown = false
+let rainbow = false
 
 //Functions
 
@@ -34,7 +36,12 @@ fillGrid()
 squares.forEach(square => {
     square.addEventListener('mouseover',(e)=>{
         if(mouseDown){
-            e.target.style.backgroundColor = color
+            if(rainbow){
+                let randomColor = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+                e.target.style.backgroundColor = randomColor
+            }else{
+                e.target.style.backgroundColor = color
+            }
         }
     })
 })
@@ -67,6 +74,17 @@ clearBtn.addEventListener('click',()=>{
     squares.forEach(square => {
         square.style.backgroundColor = '#fff'
     })
+})
+
+//Rainbow button toggle
+rainbowBtn.addEventListener('click',()=>{
+    if(!rainbowBtn.classList.contains('toggledOn')){
+        rainbowBtn.classList.add('toggledOn')
+        rainbow = true
+    }else{
+        rainbowBtn.classList.remove('toggledOn')
+        rainbow = false
+    }
 })
 
 //Grid turning on/off
