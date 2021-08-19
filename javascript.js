@@ -36,7 +36,12 @@ fillGrid()
 squares.forEach(square => {
     square.addEventListener('mouseover',(e)=>{
         if(mouseDown){
-            e.target.style.backgroundColor = color
+            if(rainbow){
+                let randomColor = `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+                e.target.style.backgroundColor = randomColor
+            }else{
+                e.target.style.backgroundColor = color
+            }
         }
     })
 })
@@ -75,8 +80,10 @@ clearBtn.addEventListener('click',()=>{
 rainbowBtn.addEventListener('click',()=>{
     if(!rainbowBtn.classList.contains('toggledOn')){
         rainbowBtn.classList.add('toggledOn')
+        rainbow = true
     }else{
         rainbowBtn.classList.remove('toggledOn')
+        rainbow = false
     }
 })
 
