@@ -3,11 +3,13 @@ const clearBtn = document.getElementById('clearBtn')
 const toggleGrid = document.getElementById('toggleLines')
 const colorPicker = document.getElementById('colorPicker')
 const colorFill = document.getElementById('colorFill')
+const rainbowBtn = document.getElementById('rainbowBtn')
 
 let squares
 let color = 'black'
 let background = 'white'
 let mouseDown = false
+let rainbow = false
 
 //Functions
 
@@ -67,6 +69,15 @@ clearBtn.addEventListener('click',()=>{
     squares.forEach(square => {
         square.style.backgroundColor = '#fff'
     })
+})
+
+//Rainbow button toggle
+rainbowBtn.addEventListener('click',()=>{
+    if(!rainbowBtn.classList.contains('toggledOn')){
+        rainbowBtn.classList.add('toggledOn')
+    }else{
+        rainbowBtn.classList.remove('toggledOn')
+    }
 })
 
 //Grid turning on/off
